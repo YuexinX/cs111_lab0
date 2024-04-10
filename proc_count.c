@@ -8,7 +8,9 @@ static struct proc_dir_entry *entry;
 
 static int proc_count(struct seq_file *m, void *v){
 	// TODO: it's all yours
-	
+	int count;
+	count = 4;
+	seq_printf (m, "%d", count);
 	return 0;
 }
 
