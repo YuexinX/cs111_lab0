@@ -10,7 +10,7 @@ static int proc_count(struct seq_file *m, void *v){
 	// TODO: it's all yours
 	int count;
 	count = 4;
-	seq_printf (m, "%d", count);
+	seq_printf (m, "%d\n", count);
 	return 0;
 }
 
