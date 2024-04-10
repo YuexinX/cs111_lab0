@@ -9,7 +9,11 @@ static struct proc_dir_entry *entry;
 static int proc_count(struct seq_file *m, void *v){
 	// TODO: it's all yours
 	int count;
-	count = 4;
+	struct tast_struct *t;
+	count = 0;
+	for_each_process(t){
+		count += 1;
+	}
 	seq_printf (m, "%d\n", count);
 	return 0;
 }
