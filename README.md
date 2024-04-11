@@ -1,13 +1,11 @@
 # A Kernel Seedling
 
-In this lab we create a /proc/count file that shows the current number of running processes running. We write a kernel module that runs in kernel mode to acces the process table that runs within kernel mode. The file proc_count.c consist of the kernel module.
-
-In the module, we used for_each_process(p) to iterate through each process and increment our count by one. Then we used seq_printf to output our result.
+a kernel module that runs in kernel mode to acces the number of process running.
 
 ## Building
 
 Build your module with make command
-insert module into the kernel
+insert module into the kernel using sudo insmod
 
 ```shell
 make
@@ -17,6 +15,7 @@ sudo insmod proc_count.ko
 ## Running
 
 use command cat to run module
+should expect an integer output representing the number of process running
 
 ```shell
 cat /proc/count
@@ -26,7 +25,12 @@ result: 157
 
 ## Cleaning Up
 
+remove module from kernel using sudo rmmod
+clean up all binary files using make clean
+
 ```shell
+
+sudo rmmod proc_count
 make clean
 
 ```
