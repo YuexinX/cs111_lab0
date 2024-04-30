@@ -51,8 +51,11 @@ Report which kernel release version you tested your module on
 It should match release numbers as seen on https://www.kernel.org/.
 
 uname - print system
+
 -s (--kernel-name): print the kernel name
+
 -r (--kernel-release): print the kernel release
+
 -v (--kernel-version): print the kernel version
 
 ```shell
